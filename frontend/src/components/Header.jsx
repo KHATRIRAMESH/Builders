@@ -1,4 +1,4 @@
-import { Button, Footer, Navbar, TextInput } from "flowbite-react";
+import { Button,  Navbar, TextInput } from "flowbite-react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { Link, useLocation } from "react-router-dom";
 import { FaMoon } from "react-icons/fa";
@@ -35,7 +35,7 @@ const Header = () => {
           <Button className="w-12 h-10 hidden sm:inline " pill color="gray">
             <FaMoon />
           </Button>
-          <Link>
+          <Link to="/sign-in">
             <Button>
               <span>Sign in</span>
             </Button>
