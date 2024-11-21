@@ -1,10 +1,10 @@
-import { Button, Label, TextInput } from "flowbite-react";
+import { Button, Label, Spinner, TextInput } from "flowbite-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const SignUp = () => {
   const [formData, setFormData] = useState({});
-  const [errorMessagge, setErrorMessage] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -40,9 +40,10 @@ const SignUp = () => {
       console.log(data);
 
       if (data.success === false) {
+        console.log(errorMessage);
+        setLoading(false);
         return setErrorMessage(data.message);
       }
-      setLoading(false);
       if (res.ok) {
         navigate("/sign-in");
       }
@@ -106,9 +107,19 @@ const SignUp = () => {
               type="submit"
               disabled={loading}
             >
-              Sign-in
+              {loading ? (
+                <>
+                  <Spinner size="sm" />
+                  <span className="pl-3">Loading...</span>
+                </>
+              ) : (
+                "Sign Up"
+              )}
             </Button>
           </form>
+          {errorMessage && (
+            <div className="mt-4 text-red-500 text-sm">{errorMessage}</div>
+          )}
           <div>
             <span>Already have a account?</span>
             <Link to="/sign-in" className="text-blue-500 hover:underline">
