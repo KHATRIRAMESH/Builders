@@ -1,6 +1,7 @@
-import { Button, Label, Spinner, TextInput } from "flowbite-react";
+import { Alert, Button, Label, Spinner, TextInput } from "flowbite-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Oauth from "../components/Oauth";
 
 const SignUp = () => {
   const [formData, setFormData] = useState({});
@@ -116,9 +117,12 @@ const SignUp = () => {
                 "Sign Up"
               )}
             </Button>
+            <Oauth/>
           </form>
           {errorMessage && (
-            <div className="mt-4 text-red-500 text-sm">{errorMessage}</div>
+            <Alert className="mt-4" color="failure">
+              {errorMessage}
+            </Alert>
           )}
           <div>
             <span>Already have a account?</span>
