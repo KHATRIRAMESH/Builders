@@ -8,7 +8,7 @@ import {
   signOutSuccess,
 } from "../redux/user/userSlice";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const DashProfile = () => {
   const { currentUser } = useSelector((state) => state.user);
@@ -117,7 +117,12 @@ const DashProfile = () => {
               placeholder="Change your password"
               onChange={handleChange}
             />
-            <Button type="submit">Edit</Button>
+            <Button type="submit">Update</Button>
+            {currentUser.isAdmin && (
+              <Link to={"/create-post"}>
+                <Button type="button" className="w-full">Create a Post</Button>
+              </Link>
+            )}
           </div>
         </form>
         <div className="text-red-500 flex justify-between  mt-3">
