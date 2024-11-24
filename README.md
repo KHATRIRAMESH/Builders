@@ -47,9 +47,9 @@ This project is a [React-based blog website](#) designed to share articles acros
 - Follow the interface to create and manage posts.
 
 
-## Screenshots
+## Gallery
 ![Screenshot of the homepage](./screenshots/articleRead.png)
-
+![Screenshot of the signinpage](./screenshots/localhost_5173_sign-in.png)
 ## Screenshots
 ![Screenshot of the signinpage]
 
