@@ -77,4 +77,4 @@ Your Name - [Email](mailto:your-email@example.com) - [LinkedIn](https://linkedin
 ## Acknowledgments
 - [React](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [OpenAI](https://openai.com/)
+- [Oauth](https://oauth.net/2/)
