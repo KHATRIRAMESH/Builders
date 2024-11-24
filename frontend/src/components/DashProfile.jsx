@@ -56,8 +56,7 @@ const DashProfile = () => {
       } else {
         dispatch(updateFailure(data.message));
       }
-      // Navigate to dashboard page
-      //   navigate("/dashboard?tab=dash");
+      
     } catch (error) {
       dispatch(updateFailure(error));
     }
@@ -82,7 +81,7 @@ const DashProfile = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="max-w-lg mx-auto w-full">
         <form onSubmit={handleSubmit} className="flex flex-col gap-2">
           <h1 className="text-center text-3xl">Profile</h1>
@@ -132,7 +131,7 @@ const DashProfile = () => {
           </span>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default DashProfile;
