@@ -23,8 +23,8 @@ This project is a [React-based blog website](#) designed to share articles acros
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/repository-name.git
-   ```
+   git clone https://github.com/KHATRIRAMESH/Builders.git
+      ```
 2. Navigate to the project directory:
    ```bash
    cd repository-name
