@@ -1,5 +1,9 @@
 
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
+
+
 
 export default function PostCard({ post }) {
   return (
@@ -24,3 +28,12 @@ export default function PostCard({ post }) {
     </div>
   );
 }
+
+PostCard.propTypes = {
+    post: PropTypes.shape({
+      slug: PropTypes.string.isRequired,     // Slug for the post route
+      image: PropTypes.string.isRequired,    // Image URL for the post
+      title: PropTypes.string.isRequired,    // Title of the post
+      category: PropTypes.string.isRequired, // Category of the post
+    }).isRequired,
+  };
