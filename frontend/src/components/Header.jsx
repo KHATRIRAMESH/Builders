@@ -1,7 +1,6 @@
 import { Avatar, Button, Dropdown, Navbar, TextInput } from "flowbite-react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { FaMoon } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { signOutSuccess } from "../redux/user/userSlice";
 const Header = () => {
@@ -56,9 +55,7 @@ const Header = () => {
           </form>
         </div>
         <div className="flex gap-2 md:order-2 ">
-          <Button className="w-12 h-10 hidden sm:inline " pill color="gray">
-            <FaMoon />
-          </Button>
+         
           {currentUser ? (
             <Dropdown
               arrowIcon={false}
@@ -102,9 +99,8 @@ const Header = () => {
           <Navbar.Link active={path == "/about"} as={"div"}>
             <Link to="/about">About</Link>
           </Navbar.Link>
-
-          <Navbar.Link active={path == "/projects"} as={"div"}>
-            <Link to="/projects">Projects</Link>
+          <Navbar.Link active={path == "/dashboard"} as={"div"}>
+            <Link to="/dashboard?tab=posts">Dashboard</Link>
           </Navbar.Link>
         </Navbar.Collapse>
       </Navbar>

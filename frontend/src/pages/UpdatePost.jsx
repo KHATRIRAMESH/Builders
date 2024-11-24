@@ -93,22 +93,16 @@ const UpdatePost = () => {
             }
             value={formData.category}
           >
-            <option value="uncategorized">Select a category</option>
-            <option value="javascript">JavaScript</option>
-            <option value="reactjs">React.js</option>
-            <option value="nextjs">Next.js</option>
+           <option value="uncategorized">Select a option</option>
+            <option value="react">React</option>
+            <option value="blockchain">Blockchain</option>
+            <option value="ai-ml">AI/ML</option>
+            <option value="python">Python</option>
+            <option value="gamedevelopment">Game Development</option>
           </Select>
         </div>
 
-        {/* {imageUploadError && <Alert color="failure">{imageUploadError}</Alert>}
-        
-        {formData.image && (
-          <img 
-            src={formData.image}
-            alt="upload"
-            className="w-full h-72 object-cover" 
-            />
-        )} */}
+       
 
         <ReactQuill
           theme="snow"
