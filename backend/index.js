@@ -20,6 +20,7 @@ app.listen(3000, () => {
 });
 
 app.use("/api/user", userRoute);
+// app.use("/api/user/",updateRoute)
 app.use('/api/auth', authRoute);
 
 // app.get("/test", (req, res) => {
