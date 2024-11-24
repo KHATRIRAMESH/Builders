@@ -23,12 +23,17 @@ const postSchema = new mongoose.Schema(
       type: String,
       default: "uncategorized",
     },
+    slug: {
+      type: String,
+      required: false,
+      unique: false,
+    },
   },
   {
     timestamps: true,
   }
 );
 
-const Post = mongoose.model("Post", { postSchema });
+const Post = mongoose.model("Post", postSchema );
 
 export default Post;
