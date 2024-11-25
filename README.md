@@ -23,8 +23,8 @@ This project is a [React-based blog website](#) designed to share articles acros
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/repository-name.git
-   ```
+   git clone https://github.com/KHATRIRAMESH/Builders.git
+      ```
 2. Navigate to the project directory:
    ```bash
    cd repository-name
@@ -47,9 +47,11 @@ This project is a [React-based blog website](#) designed to share articles acros
 - Follow the interface to create and manage posts.
 
 
-## Screenshots
-![Screenshot of the homepage](.frontend/src/screenshots/articleRead.png)
-
+## Gallery
+Article
+![Screenshot of the homepage](./screenshots/articleRead.png)
+Sign-in
+![Screenshot of the signinpage](./screenshots/localhost_5173_sign-in.png)
 ## Screenshots
 ![Screenshot of the signinpage]
 
@@ -75,4 +77,4 @@ Your Name - [Email](mailto:your-email@example.com) - [LinkedIn](https://linkedin
 ## Acknowledgments
 - [React](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [OpenAI](https://openai.com/)
+- [Oauth](https://oauth.net/2/)
