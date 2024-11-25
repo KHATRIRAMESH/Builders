@@ -40,7 +40,7 @@ This project is a [React-based blog website](#) designed to share articles acros
 
 ## Usage
 - Run the application:
-  ```bash
+  ```bashlocalhost_5173_sign-in
   npm start
   ```
 - Open the application in your browser at `http://localhost:3000`.
@@ -48,12 +48,22 @@ This project is a [React-based blog website](#) designed to share articles acros
 
 
 ## Gallery
-Article
-![Screenshot of the homepage](./screenshots/articleRead.png)
-Sign-in
+Home page
 ![Screenshot of the signinpage](./screenshots/localhost_5173_sign-in.png)
-## Screenshots
-![Screenshot of the signinpage]
+Article page
+![Screenshot of the homepage](./screenshots/articleRead.png)
+Sign-in page
+![Screenshot of the signinpage](./screenshots/signin.png)
+Profile page
+![Screenshot of the signinpage](./screenshots/dashboardProfile.png)
+Update page
+![Screenshot of the signinpage](./screenshots/localhost_5173_update-post_6743f4bca50aa5eee87c735c.png)
+Dashboard post page
+![Screenshot of the signinpage](./screenshots/dashboardPost.png)
+Create Article page
+![Screenshot of the signinpage](./screenshots/createArticle.png)
+Signup page
+![Screenshot of the signinpage](./screenshots/signUp.png)
 
 ## Contributing
 Contributions are welcome! Follow these steps:
