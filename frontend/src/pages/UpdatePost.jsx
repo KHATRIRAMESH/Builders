@@ -31,7 +31,11 @@ const UpdatePost = () => {
 
         if (res.ok) {
           setPublishError(null);
-          setFormData(data.posts[0]);
+          const index = data.posts.findIndex((post) => post._id == postId);
+          console.log(index);
+          console.log(data.posts[index]);
+          setFormData(data.posts[index]);
+          console.log(data.posts);
         }
       };
 
@@ -88,12 +92,13 @@ const UpdatePost = () => {
             value={formData.title}
           />
           <Select
+            defaultValue={formData.category}
             onChange={(e) =>
               setFormData({ ...formData, category: e.target.value })
             }
             value={formData.category}
           >
-           <option value="uncategorized">Select a option</option>
+            <option value="uncategorized">Select a option</option>
             <option value="react">React</option>
             <option value="blockchain">Blockchain</option>
             <option value="ai-ml">AI/ML</option>
@@ -101,8 +106,6 @@ const UpdatePost = () => {
             <option value="gamedevelopment">Game Development</option>
           </Select>
         </div>
-
-       
 
         <ReactQuill
           theme="snow"
@@ -114,9 +117,7 @@ const UpdatePost = () => {
           value={formData.content}
         />
 
-        <Button type="submit">
-          Update Post
-        </Button>
+        <Button type="submit">Update Post</Button>
 
         {publishError && (
           <Alert className="mt-5" color="failure">
