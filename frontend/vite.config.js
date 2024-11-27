@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://builders-xags.vercel.app",
+        target: "http://localhost:3000",
         secure: false,
       },
     },

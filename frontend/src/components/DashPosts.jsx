@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { Button, Modal, Table } from "flowbite-react";
 import { Link } from "react-router-dom";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
+import { backendURl } from "../config";
 
 const DashPosts = () => {
   const { currentUser } = useSelector((state) => state.user);
@@ -16,7 +17,7 @@ const DashPosts = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await fetch(`/api/post/getposts?userId=${currentUser._id}`);
+        const res = await fetch(`${backendURl}/post/getposts?userId=${currentUser._id}`);
         const data = await res.json();
 
         console.log(data.posts.length);
@@ -41,7 +42,7 @@ const DashPosts = () => {
     setShowModal(false);
     try {
       const res = await fetch(
-        `/api/post/deletepost/${postIdToDelete}/${currentUser._id}`,
+        `${backendURl}/post/deletepost/${postIdToDelete}/${currentUser._id}`,
         {
           method: "DELETE",
         }

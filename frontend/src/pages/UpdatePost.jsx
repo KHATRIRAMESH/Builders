@@ -7,6 +7,7 @@ import "react-quill/dist/quill.snow.css";
 // import "react-circular-progressbar/dist/styles.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { backendURl } from "../config";
 
 const UpdatePost = () => {
   const [formData, setFormData] = useState({});
@@ -20,7 +21,7 @@ const UpdatePost = () => {
   useEffect(() => {
     try {
       const fetchPost = async () => {
-        const res = await fetch(`/api/post/getposts?postId=${postId}`);
+        const res = await fetch(`${backendURl}/post/getposts?postId=${postId}`);
         const data = await res.json();
 
         if (!res.ok) {
@@ -49,7 +50,7 @@ const UpdatePost = () => {
     e.preventDefault();
     try {
       const res = await fetch(
-        `/api/post/updatepost/${formData._id}/${currentUser._id}`,
+        `${backendURl}/post/updatepost/${formData._id}/${currentUser._id}`,
         {
           method: "PUT",
           headers: {

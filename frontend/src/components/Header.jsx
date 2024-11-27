@@ -3,6 +3,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { signOutSuccess } from "../redux/user/userSlice";
+import { backendURl } from "../config";
 const Header = () => {
   const path = useLocation().pathname;
   const { currentUser } = useSelector((state) => state.user);
@@ -13,7 +14,7 @@ const Header = () => {
 
   const handleSignOut = async () => {
     try {
-      const res = await fetch("/api/user/signout", {
+      const res = await fetch(`${backendURl}/user/signout`, {
         method: "POST",
       });
       const data = await res.json();

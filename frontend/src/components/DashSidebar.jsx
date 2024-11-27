@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
 import { signOutSuccess } from "../redux/user/userSlice.js";
 
 import { useNavigate } from "react-router-dom";
+import { backendURl } from "../config.js";
 
 const DashSidebar = () => {
   const { currentUser } = useSelector((state) => state.user);
@@ -35,7 +36,7 @@ const DashSidebar = () => {
 
   const handleSignOut = async () => {
     try {
-      const res = await fetch("/api/user/signout", {
+      const res = await fetch(`${backendURl}/user/signout`, {
         method: "POST",
       });
       const data = await res.json();

@@ -3,6 +3,7 @@ import { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { useNavigate } from "react-router-dom";
+import { backendURl } from "../config";
 
 const CreatePost = () => {
   const [formData, setFormData] = useState({});
@@ -20,7 +21,7 @@ const CreatePost = () => {
 
     // Submit form data to your backend here.
     try {
-      const res = await fetch("/api/post/create", {
+      const res = await fetch(`${backendURl}/post/create`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
