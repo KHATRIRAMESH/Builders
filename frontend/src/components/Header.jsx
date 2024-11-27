@@ -44,7 +44,8 @@ const Header = () => {
         <Button className="w-12 h-10  lg:hidden" color="gray" pill>
           <AiOutlineSearch />
         </Button>
-        <div className="order-1">
+        <div className="order-1 flex gap-2  ">
+          
           <form>
             <TextInput
               type="text"
@@ -53,10 +54,20 @@ const Header = () => {
               className="hidden lg:inline"
             />
           </form>
+          {currentUser ? (<Link to="/create-post">
+            <Button className="flex items-center text-white size-fit ">
+            Add Post
+            </Button></Link>) : ""}
         </div>
         <div className="flex gap-2 md:order-2 ">
+          {currentUser &&
+            <span className="text-white flex items-center">
+              Hi { currentUser.username }!
+            </span>}
          
           {currentUser ? (
+            
+            
             <Dropdown
               arrowIcon={false}
               inline
