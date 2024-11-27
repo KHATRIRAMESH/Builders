@@ -81,7 +81,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 ## Contact
-Your Name - [Email](mailto:your-email@example.com) - [LinkedIn](https://linkedin.com/in/your-profile)
+Your Name - [Email](mailto:khatriramesh972@gmail.com) - [LinkedIn](https://linkedin.com/in/your-profile)
 
 
 ## Acknowledgments
