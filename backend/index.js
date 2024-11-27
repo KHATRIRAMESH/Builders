@@ -24,20 +24,29 @@ app.listen(3000, () => {
   console.log("listening on port 3000");
 });
 
-app.use("/api/user", userRoute);
-// app.use("/api/user/",updateRoute)
-app.use("/api/auth", authRoute);
-app.use("/api/post", postRoute);
-
-app.use(express.static(path.join(__dirname, "client/dist")));
-
+//home route
 app.get("/", (req, res) => {
   res.send("Hello from Node API server!");
 });
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
-});
 
+//user routes
+app.use("/api/user", userRoute);
+// app.use("/api/user/",updateRoute)
+
+
+//auth routes
+app.use("/api/auth", authRoute);
+
+//post routes
+app.use("/api/post", postRoute);
+
+
+//login routes
+// app.use(express.static(path.join(__dirname, "client/dist")));
+
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+// });
 
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
