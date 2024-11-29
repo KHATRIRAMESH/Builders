@@ -21,7 +21,7 @@ const CreatePost = () => {
 
     // Submit form data to your backend here.
     try {
-      const res = await fetch(`${backendURl}/post/create`, {
+      const res = await fetch(`api/post/create`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

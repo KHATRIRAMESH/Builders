@@ -8,7 +8,6 @@ import {
 } from "../redux/user/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Oauth from "../components/Oauth";
-import { backendURl } from "../config";
 
 const SignIn = () => {
   const [formData, setFormData] = useState({});
@@ -39,7 +38,7 @@ const SignIn = () => {
     try {
       dispatch(signInStart());
 
-      const res = await fetch(`${backendURl}/auth/signin`, {
+      const res = await fetch(`api/auth/signin`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

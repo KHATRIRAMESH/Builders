@@ -41,7 +41,7 @@ const DashProfile = () => {
       // dispatch(updateUserProfile(formData));
 
       // Reset form data
-      const res = await fetch(`${backendURl}/user/update/${currentUser._id}`, {
+      const res = await fetch(`api/user/update/${currentUser._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -65,7 +65,7 @@ const DashProfile = () => {
 
   const handleSignOut = async () => {
     try {
-      const res = await fetch(`${backendURl}/user/signout`, {
+      const res = await fetch(`api/user/signout`, {
         method: "POST",
       });
       const data = await res.json();

@@ -17,7 +17,7 @@ const DashPosts = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await fetch(`${backendURl}/post/getposts?userId=${currentUser._id}`);
+        const res = await fetch(`api/post/getposts?userId=${currentUser._id}`);
         const data = await res.json();
 
         console.log(data.posts.length);
@@ -42,7 +42,7 @@ const DashPosts = () => {
     setShowModal(false);
     try {
       const res = await fetch(
-        `${backendURl}/post/deletepost/${postIdToDelete}/${currentUser._id}`,
+        `api/post/deletepost/${postIdToDelete}/${currentUser._id}`,
         {
           method: "DELETE",
         }
